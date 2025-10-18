@@ -1,8 +1,15 @@
+/* bottone custom piu piccolo */
 .btn-xs {
   font-size: 0.8rem;
   padding: 0.1rem 0.4rem;
 }
-.table-pb td,
-.table-pb th {
- /*  padding-bottom: 1rem; */
+
+/* elemento selezionato custom */
+.accordion-button {
+  --bs-accordion-active-bg: white;
+}
+.accordion-button:focus {
+  border: none;
+  box-shadow: none;
+  font-weight: 800;
 }
