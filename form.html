@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Aggiungi Libro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <!--Navbar Bootstrap 
+        Menù "haburger" espandibile su mobile e tablet
+        Menù espanso su desktop (navbar-expand-lg)
+        data-bs-theme imposta un tema di colori preimpostato:"light"-di default-,"dark", o personalizzato su css
+    --> 
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/duck.png" class="img-fluid" alt="logo duck"  width="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Anagrafica Utenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Storico Prestiti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="d-inline-flex" role="search" data-bs-theme="light">
+                    <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"/>
+                    <button class="btn btn-outline-light" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-6">
+                    <label for="inputName" class="form-label">Nome Autore</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Inserisci il nome dell'autore">
+                </div>
+                <div class="col-6">
+                    <label for="inputSurname" class="form-label">Cognome Autore</label>
+                    <input type="text" class="form-control" id="inputSurname" placeholder="Inserisci il cognome dell'autore">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="inputTitle" class="form-label">Titolo</label>
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Inserisci il titolo del libro">
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="col">
+                    <label for="inputGenre" class="form-label">Genere</label>
+                    <select id="inputGenre" class="form-select">
+                        <option selected>Scegli il genere</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="inputDate" class="form-label">Anno di pubblicazione</label>
+                    <input type="text" class="form-control" id="inputDate">
+                </div>
+                <div class="col">
+                    <label for="inputCode" class="form-label">Codice ISBN</label>
+                    <input type="text" class="form-control" id="inputCode">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="inputNotes" class="form-label">Note</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+    
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="digitalCheck">
+                    <label class="form-check-label" for="digitalCheck">Disponbile anche in digitale</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Aggiungi libro</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
