@@ -49,59 +49,68 @@
 </header>
 
 <main>
-    <div class="container">
-        <form>
-            <div class="row">
+    <div class="container mt-3">
+        <form action="./index.html" method="get">
+            <h1 class="fs-3">Nuovo Libro</h1>
+            <div class="row my-3">
                 <div class="col-6">
                     <label for="inputName" class="form-label">Nome Autore</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Inserisci il nome dell'autore">
+                    <input type="text" name="Nome" class="form-control" id="inputName" placeholder="Inserisci il nome dell'autore">
                 </div>
                 <div class="col-6">
                     <label for="inputSurname" class="form-label">Cognome Autore</label>
-                    <input type="text" class="form-control" id="inputSurname" placeholder="Inserisci il cognome dell'autore">
+                    <input type="text" name="Cognome" class="form-control" id="inputSurname" placeholder="Inserisci il cognome dell'autore">
                 </div>
             </div>
-            <div class="row">
+            <div class="row my-3">
                 <div class="col-12">
                     <label for="inputTitle" class="form-label">Titolo</label>
-                    <input type="text" class="form-control" id="inputTitle" placeholder="Inserisci il titolo del libro">
+                    <input type="text" name="Titolo" class="form-control" id="inputTitle" placeholder="Inserisci il titolo del libro">
+                    <div id="HelpTitle" class="form-text">Titolo versione italiana</div>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-lg-3">
+
+            <!-- riga tripla -->
+            <div class="row g-3 row-cols-1 row-cols-lg-3">
                 <div class="col">
                     <label for="inputGenre" class="form-label">Genere</label>
-                    <select id="inputGenre" class="form-select">
+                    <select id="inputGenre" class="form-select" name="Genere">
                         <option selected>Scegli il genere</option>
-                        <option></option>
-                        <option></option>
+                        <option value="1">Narrativa</option>
+                        <option value="2">Giallo</option>
+                        <option value="3">Fantasy</option>
                     </select>
                 </div>
                 <div class="col">
                     <label for="inputDate" class="form-label">Anno di pubblicazione</label>
-                    <input type="text" class="form-control" id="inputDate">
+                    <input type="number" class="form-control" name="Anno" id="inputDate"  min="1900" max="2025" step="1" placeholder="Inserisci l'anno">
                 </div>
                 <div class="col">
                     <label for="inputCode" class="form-label">Codice ISBN</label>
-                    <input type="text" class="form-control" id="inputCode">
+                    <input type="text" class="form-control" name="ISBN" id="inputCode" placeholder="Inserisci il codice ISBN#" pattern="^(97(8|9))?\d{9}(\d|X)$">
                 </div>
             </div>
-
-            <div class="row">
+            <div class="border-top my-4"></div>
+            <!-- textarea -->
+            <div class="row my-3">
                 <div class="col-12">
                     <label for="inputNotes" class="form-label">Note</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="Note" id="exampleFormControlTextarea1" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
                 </div>
             </div>
-    
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="digitalCheck">
-                    <label class="form-check-label" for="digitalCheck">Disponbile anche in digitale</label>
+            
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" name="Digit" type="checkbox" id="digitalCheck">
+                        <label class="form-check-label" for="digitalCheck">Disponbile anche in digitale</label>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Aggiungi libro</button>
+            <div class="row my-3">
+                <div class="col-12 mb-5">
+                    <button type="submit" class="btn btn-primary">Aggiungi libro</button>
+                </div>
             </div>
         </form>
     </div>

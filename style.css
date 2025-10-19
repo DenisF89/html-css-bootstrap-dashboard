@@ -13,3 +13,7 @@
   box-shadow: none;
   font-weight: 800;
 }
+
+form label{
+  font-weight:500;
+}
